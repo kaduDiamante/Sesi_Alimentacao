@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desperdício da Semana</title>
+    <link rel="stylesheet" href="/estilo/nutricionistadesperdicios.css">
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <a href="/Dashboard.html"><img src="/assests/logo.png" class="logo"></a>
+        <input type="search" placeholder="PESQUISAR SALAS" class="topnav" style="font-size: 24px;">
+        <a href="/Perfil_Nutricionista.html"><img src="/assests/perfil.png" class="perfil"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-arrow">
+                <a href="/Dashboard.html"><img src="/assests/Seta esquerda.svg" style="height: 50px; width: 50px;"></a>
+            </div>
+            <section class="content">
+                <h2>DESPERDÍCIO DA SEMANA</h2>
+                <div class="desperdicio-semana">
+                    <h3>DESPERDÍCIO DD/MM/AAAA</h3>
+                    <textarea placeholder="LOCAL PARA INSERIR DADOS SOBRE O DESPERDÍCIO DE CADA DIA"></textarea>
+                </div>
+            </section>
+            <aside class="sidebar">
+                <select>
+                    <option>ESCOLHA A SEMANA</option>
+                </select>
+                <ul class="dias-semana">
+                    <li>
+                        <input type="radio" id="segunda" name="dia-semana" checked>
+                        <label for="segunda">SEGUNDA-FEIRA</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="terca" name="dia-semana">
+                        <label for="terca">TERÇA-FEIRA</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="quarta" name="dia-semana">
+                        <label for="quarta">QUARTA-FEIRA</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="quinta" name="dia-semana">
+                        <label for="quinta">QUINTA-FEIRA</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="sexta" name="dia-semana">
+                        <label for="sexta">SEXTA-FEIRA</label>
+                    </li>
+                </ul>
+                <button class="submit-btn" onclick=Desperdicio_submit_btn()>SUBMETER</button>
+            </aside>
+        </div>
+    </main>
+    <script src="/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/estilo/Set_Cardapio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Set Cardapio Nutri</title>
+</head>
+<body>
+    <div class="cabecalho">
+        <a href="/Dashboard.html"><img src="/assests/logo.png" class="logo"></a>
+        <input type="search" placeholder="PESQUISAR SALAS" class="topnav" style="font-size: 24px;">
+        <a href="/Perfil_Nutricionista.html"><img src="/assests/perfil.png" class="perfil"></a>
+    </div>
+    <div class="start_title">
+        <h1>DEFINIR O CARDÁPIO DA SEMANA</h1>
+    </div>
+    <main class="container">
+        <div class="upload-container">
+            <input type="file" id="arquivo" name="arquivo" accept="image/*" onchange="previewImage(event)">
+            <div class="image-preview" id="imagePreview"></div>
+            <label for="arquivo" class="upload-label">ESCOLHER IMAGEM</label>
+        </div>
+        <div class="div_final_button">
+            <input class="final_button" type="submit" value="ENVIAR" onclick=Set_cardapio_final_button()>
+        </div>
+    </main>
+    <script src="/script/script.js"></script>
+</body>

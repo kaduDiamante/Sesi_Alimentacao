@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REFEIÇÕES</title>
+    <link rel="stylesheet" href="/estilo/style refeicoes alunos.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cima">
+            <div class="cima1">
+                <a href="Dashboard Aluno.html" style="text-decoration: none;"><button class="normal"><img src="/assests/logo.png" style="width: 197px;height: 100px;"></button></a>
+            </div>
+            <div class="cima2">
+                <a href="Perfil_Aluno.html">
+                    <button class="normal"><img src="/assests/perfil.png" height="70px" width="70px" style="margin-top: 10px;"></button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="meio">
+        <div class="meio1">
+            <a href="Dashboard Aluno.html" style="text-decoration: none;"><button class="normal"><img src="/assests/Seta esquerda.svg" height="70px" width="70px"></button></a>
+        </div>
+        <div class="meio2">
+            <H1>REFEIÇÕES DA SEMANA</H1>
+        </div>
+    </div>
+    <div class="fim">
+        <div class="fim1">
+            <div class="titulo_fim1">
+                <p>CARDÁPIO DA SEMANA</p>
+            </div>
+            <div class="cardapio">
+                <img src="/assests/Cardapio.png" width="609px" height="460px">
+            </div>
+        </div>
+        <div class="fim2">
+            <div class="titulo_fim2">
+                <button id="prev-day" class="normal"><img src="/assests/Seta esquerda.svg" height="60px" width="60px" ></button>
+                <input type="text" id="date-input" placeholder="DD/MM/AAAA" readonly>
+                <button id="next-day"class="normal"><img src="/assests/Seta direita.svg" height="60px" width="60px"></button>
+            </div>
+            <div class="cardapio2">
+                    <div class="seletor">
+                        <div>
+                            <input type="checkbox" name="LANCHE DA MANHÃ" />
+                            <label><p style="font-size: 20px">CAFÉ DA MANHÃ</p></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="ALMOÇO"  />
+                            <label><p style="font-size: 20px;">ALMOÇO</p></label>
+                        </div>
+                        <div>
+                            <input type="checkbox"  name="ALMOÇO"  />
+                            <label><p style="font-size: 20px;">CAFÉ DA TARDE</p></label>
+                        </div>
+                    </div>
+            </div>
+            <button class="botaoembaixo" onclick=Refeicoes_alunos_botaoembaixo()><p>SUBMETER</p></button>
+        </div>
+    </div>
+    <script src="/script/script.js"></script>
+</body>
+</html>
