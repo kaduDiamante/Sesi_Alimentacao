@@ -7,56 +7,70 @@
     <link rel="stylesheet" href="/estilo/nutricionistadesperdicios.css">
 </head>
 <body>
-    <header>
-        <div class="cabecalho">
-            <a href="/Dashboard.html"><img src="/assests/logo.png" class="logo"></a>
-        <input type="search" placeholder="PESQUISAR SALAS" class="topnav" style="font-size: 24px;">
-        <a href="/Perfil_Nutricionista.html"><img src="/assests/perfil.png" class="perfil"></a>
+    <header class="cabecalho">
+        <div class="cima">
+            <div class="cima1">
+                <a href="Dashboard.html" style="text-decoration: none;"><button class="normal"><img src="/assests/logo.png" style="width: 197px; height: 100px;"></button></a>
+            </div>
+            <div class="cima2">
+                <a href="Perfil_Aluno.html">
+                    <button class="normal"><img src="/assests/perfil.png" height="70px" width="70px" style="margin-top: 10px;"></button>
+                </a>
+            </div>
         </div>
     </header>
-
-    <main>
-        <div class="container">
-            <div class="left-arrow">
-                <a href="/Dashboard.html"><img src="/assests/Seta esquerda.svg" style="height: 50px; width: 50px;"></a>
-            </div>
-            <section class="content">
-                <h2>DESPERDÍCIO DA SEMANA</h2>
-                <div class="desperdicio-semana">
-                    <h3>DESPERDÍCIO DD/MM/AAAA</h3>
-                    <textarea placeholder="LOCAL PARA INSERIR DADOS SOBRE O DESPERDÍCIO DE CADA DIA"></textarea>
-                </div>
-            </section>
-            <aside class="sidebar">
-                <select>
-                    <option>ESCOLHA A SEMANA</option>
-                </select>
-                <ul class="dias-semana">
-                    <li>
-                        <input type="radio" id="segunda" name="dia-semana" checked>
-                        <label for="segunda">SEGUNDA-FEIRA</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="terca" name="dia-semana">
-                        <label for="terca">TERÇA-FEIRA</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="quarta" name="dia-semana">
-                        <label for="quarta">QUARTA-FEIRA</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="quinta" name="dia-semana">
-                        <label for="quinta">QUINTA-FEIRA</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="sexta" name="dia-semana">
-                        <label for="sexta">SEXTA-FEIRA</label>
-                    </li>
-                </ul>
-                <button class="submit-btn" onclick=Desperdicio_submit_btn()>SUBMETER</button>
-            </aside>
+    <div class="titulo">
+        <a href="/Dashboard.html" style="text-decoration: none;">
+            <button class="botao" style="background-image: url('/assests/Seta\ esquerda.svg'); cursor: pointer; margin-left: 20px;"></button>
+        </a>
+        <div class="tituloMeio">
+            <h1>HISTÓRICO DE DESPERDÍCIO</h1>
         </div>
-    </main>
+    </div>
+    
+    <div class="conteudo">
+        <div class="texto">
+            <button class="botao" style="background-image: url('/assests/Seta\ esquerda.svg'); margin-left: 19px; cursor: pointer;"></button>
+            <h1>DESPERDÍCIO DA SEMANA</h1>
+            <button class="botao" style="background-image: url('/assests/Seta\ direita.svg');margin-right: -4px; cursor: pointer;"></button>
+            
+        </div>
+        <div class="informacoes">
+            <div class="bloco">
+                <h1>SEGUNDA</h1>
+                <div class="blocoEs">
+                    <input type="text" class="Desper_Input">
+                </div>
+            </div>
+            <div class="bloco">
+                <h1>TERÇA</h1>
+                <div class="blocoEs">
+                    <input type="text" class="Desper_Input">
+                </div>
+            </div>
+            <div class="bloco">
+                <h1>QUARTA</h1>
+                <div class="blocoEs">
+                    <input type="text" class="Desper_Input">
+                </div>
+            </div>
+            <div class="bloco">
+                <h1>QUINTA</h1>
+                <div class="blocoEs">
+                    <input type="text" class="Desper_Input">
+                </div>
+            </div>
+            <div class="bloco">
+                <h1>SEXTA</h1>
+                <div class="blocoEs">
+                    <input type="text" class="Desper_Input">
+                </div>
+            </div>
+        </div>
+        <div class="final_Button">
+            <input class="button_fim" type="submit" value="ENVIAR" onclick=Set_Desperdicio_final_button()>
+        </div>
+    </div>
     <script src="/script/script.js"></script>
 </body>
 </html>
