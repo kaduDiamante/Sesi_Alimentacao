@@ -9,5 +9,3 @@ comparar na base (main) com a dev ou a brench
 create pull request
 merge pull request
 
-
-meu pau 
