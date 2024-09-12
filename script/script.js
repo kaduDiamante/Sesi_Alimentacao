@@ -4,6 +4,12 @@ const nextDayBtn = document.getElementById('next-day');
 
 function Set_cardapio_final_button(){
     window.alert('O Cardápio foi enviado com SUCESSO')
+    window.location.href = "/Dashboard.html"
+}
+
+function Set_Desperdicio_final_button(){
+    window.alert('O Desperdício da Semana foi enviado com SUCESSO')
+    window.location.href = "/Dashboard.html"
 }
 
 function Desperdicio_submit_btn(){
@@ -24,6 +30,7 @@ function Perfil_aluno_FinalButton(){
 
 function Refeicoes_alunos_botaoembaixo(){
     window.alert('As informações foram enviadas com SUCESSO')
+    window.location.href = "/Dashboard Aluno.html"
 }
 
 function previewImage(event) {
