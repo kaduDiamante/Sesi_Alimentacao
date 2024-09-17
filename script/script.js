@@ -90,3 +90,35 @@ nextDayBtn.addEventListener('click', () => {
 updateDateInput();
 
 // FIM DO CAMPO DE DATA //
+
+// DAR ZOOM NA IMAGEM DO CARDÁPIO //
+
+document.addEventListener('DOMContentLoaded', () => {
+    const image = document.getElementById('expandable-image');
+    const overlay = document.getElementById('overlay');
+    const closeButton = document.getElementById('close-button');
+    
+    image.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        const clone = image.cloneNode(true);
+        overlay.innerHTML = '';
+        overlay.appendChild(clone);
+        overlay.appendChild(closeButton); // Re-add the close button to the overlay
+        clone.style.maxWidth = '100%';
+        clone.style.maxHeight = '100%';
+    });
+
+    closeButton.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        overlay.innerHTML = '';
+    });
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.style.display = 'none';
+            overlay.innerHTML = '';
+        }
+    });
+});
+
+// ------------------------------------ //
