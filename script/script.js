@@ -70,9 +70,7 @@ const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
 
 const updateDateInput = () => {
     const daysInMonth = getDaysInMonth(currentDate.getFullYear(), currentDate.getMonth());
-
     dateInput.value = formatDate(currentDate);
-
     prevDayBtn.disabled = currentDate.getDate() === 1;
     nextDayBtn.disabled = currentDate.getDate() === daysInMonth;
 };
@@ -103,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const clone = image.cloneNode(true);
         overlay.innerHTML = '';
         overlay.appendChild(clone);
-        overlay.appendChild(closeButton); // Re-add the close button to the overlay
+        overlay.appendChild(closeButton); 
         clone.style.maxWidth = '100%';
         clone.style.maxHeight = '100%';
     });
@@ -120,5 +118,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// ------------------------------------ //
+
+// DESMARCAR OS CHECKS - BOXS //
+
+document.getElementById('prev-day').addEventListener('click', clearAllCheckboxes);
+document.getElementById('next-day').addEventListener('click', clearAllCheckboxes);
+
+function clearAllCheckboxes() {
+    const checkboxes = document.querySelectorAll('.clearCheckbox');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+}
 
 // ------------------------------------ //
