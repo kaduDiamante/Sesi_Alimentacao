@@ -35,11 +35,16 @@ create table Alimentacao(
 
 alter table Alunos alter column RM int not null 
 alter table Alimentacao alter column RM int not null
+alter table Cardapio alter column DIA date not null
 
 alter table Alunos add constraint pk_Alunos primary key (RM)
 alter table Alimentacao add constraint pk_Alimentacao primary key (RM)
+alter table Cardapio add constraint pk_Cardapio primary key (DIA)
 
 alter table Alimentacao add constraint fk_Alimentacao foreign key (RM) references Alunos(RM)
+alter table Alimentacao add constraint fk_Alimentacao_dia foreign key (DIA) references Cardapio (DIA)
+
+alter table Alimentacao add constraint unique_key_Dia unique (RM, DIA)
 
 -- INSERINDO OS INSERTS --
 
@@ -107,4 +112,10 @@ select COUNT(*) as TotalAlmoço from Alimentacao, Alunos where ALMOCO = 1 and DI
 
 select COUNT(*) as TotalQueNãoVãoComer from Alunos where RM not in (select RM from Alimentacao where dia = '15/09/2024')
 
+
+select * from Alimentacao
 select * from Alunos
+select * from Desperdicio
+select * from Cardapio
+
+
