@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFEIÇÕES</title>
     <link rel="stylesheet" href="/estilo/style refeicoes alunos.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/assests/logo.png">
 </head>
 <body>
     <header class="cabecalho">
@@ -32,8 +33,11 @@
             <div class="titulo_fim1">
                 <p>CARDÁPIO DA SEMANA</p>
             </div>
-            <div class="cardapio">
-                <img src="/assests/Cardapio.png" width="609px" height="460px">
+            <div class="image-container">
+                <img id="expandable-image" class="img_cardapio" src="/assests/Cardapio.png" width="609px" height="460px">
+            </div>
+            <div id="overlay" class="overlay">
+                <button id="close-button" class="close-button">&times;</button>
             </div>
         </div>
         <div class="fim2">
@@ -44,16 +48,16 @@
             </div>
             <div class="cardapio2">
                     <div class="seletor">
-                        <div>
-                            <input type="checkbox" name="LANCHE DA MANHÃ" />
+                        <div class="style_div_checkBox">
+                            <input type="checkbox" name="LANCHE DA MANHÃ" class="clearCheckbox"/>
                             <label><p style="font-size: 20px">CAFÉ DA MANHÃ</p></label>
                         </div>
-                        <div>
-                            <input type="checkbox" name="ALMOÇO"  />
+                        <div class="style_div_checkBox">
+                            <input type="checkbox" name="ALMOÇO"  class="clearCheckbox"/>
                             <label><p style="font-size: 20px;">ALMOÇO</p></label>
                         </div>
-                        <div>
-                            <input type="checkbox"  name="ALMOÇO"  />
+                        <div class="style_div_checkBox">
+                            <input type="checkbox"  name="ALMOÇO"  class="clearCheckbox"/>
                             <label><p style="font-size: 20px;">CAFÉ DA TARDE</p></label>
                         </div>
                     </div>

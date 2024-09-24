@@ -70,9 +70,7 @@ const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
 
 const updateDateInput = () => {
     const daysInMonth = getDaysInMonth(currentDate.getFullYear(), currentDate.getMonth());
-
     dateInput.value = formatDate(currentDate);
-
     prevDayBtn.disabled = currentDate.getDate() === 1;
     nextDayBtn.disabled = currentDate.getDate() === daysInMonth;
 };
@@ -90,3 +88,49 @@ nextDayBtn.addEventListener('click', () => {
 updateDateInput();
 
 // FIM DO CAMPO DE DATA //
+
+// DAR ZOOM NA IMAGEM DO CARDÁPIO //
+
+document.addEventListener('DOMContentLoaded', () => {
+    const image = document.getElementById('expandable-image');
+    const overlay = document.getElementById('overlay');
+    const closeButton = document.getElementById('close-button');
+    
+    image.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        const clone = image.cloneNode(true);
+        overlay.innerHTML = '';
+        overlay.appendChild(clone);
+        overlay.appendChild(closeButton); 
+        clone.style.maxWidth = '100%';
+        clone.style.maxHeight = '100%';
+    });
+
+    closeButton.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        overlay.innerHTML = '';
+    });
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.style.display = 'none';
+            overlay.innerHTML = '';
+        }
+    });
+});
+
+// ------------------------------------ //
+
+// DESMARCAR OS CHECKS - BOXS //
+
+document.getElementById('prev-day').addEventListener('click', clearAllCheckboxes);
+document.getElementById('next-day').addEventListener('click', clearAllCheckboxes);
+
+function clearAllCheckboxes() {
+    const checkboxes = document.querySelectorAll('.clearCheckbox');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+}
+
+// ------------------------------------ //
