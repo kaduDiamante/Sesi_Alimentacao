@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFEIÇÕES</title>
-    <link rel="stylesheet" href="/estilo/style refeicoes alunos.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/assests/logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style refeicoes alunos.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/img/logo.png">
 </head>
 <body>
     <header class="cabecalho">
         <div class="cima">
             <div class="cima1">
-                <a href="Dashboard Aluno.html" style="text-decoration: none;"><button class="normal"><img src="/assests/logo.png" style="width: 197px;height: 100px;"></button></a>
+                <a href="/Dashboard_Aluno" style="text-decoration: none;"><button class="normal"><img src="/static/img/logo.png" style="width: 197px;height: 100px;"></button></a>
             </div>
             <div class="cima2">
-                <a href="Perfil_Aluno.html">
-                    <button class="normal"><img src="/assests/perfil.png" height="70px" width="70px" style="margin-top: 10px;"></button>
+                <a href="/Perfil_Aluno">
+                    <button class="normal"><img src="/static/img/perfil.png" height="70px" width="70px" style="margin-top: 10px;"></button>
                 </a>
             </div>
         </div>
     </header>
     <div class="meio">
         <div class="meio1">
-            <a href="Dashboard Aluno.html" style="text-decoration: none;"><button class="normal"><img src="/assests/Seta esquerda.svg" height="70px" width="70px"></button></a>
+            <a href="/Dashboard_Aluno" style="text-decoration: none;"><button class="normal"><img src="/static/img/Seta esquerda.svg" height="70px" width="70px"></button></a>
         </div>
         <div class="meio2">
             <H1>REFEIÇÕES DA SEMANA</H1>
@@ -34,7 +34,7 @@
                 <p>CARDÁPIO DA SEMANA</p>
             </div>
             <div class="image-container">
-                <img id="expandable-image" class="img_cardapio" src="/assests/Cardapio.png" width="609px" height="460px">
+                <img id="expandable-image" class="img_cardapio" src="/static/img/Cardapio.png" width="609px" height="460px">
             </div>
             <div id="overlay" class="overlay">
                 <button id="close-button" class="close-button">&times;</button>
@@ -42,9 +42,9 @@
         </div>
         <div class="fim2">
             <div class="titulo_fim2">
-                <button id="prev-day" class="normal"><img src="/assests/Seta esquerda.svg" height="60px" width="60px" ></button>
+                <button id="prev-day" class="normal"><img src="/static/img/Seta esquerda.svg" height="60px" width="60px" ></button>
                 <input type="text" id="date-input" placeholder="DD/MM/AAAA" readonly>
-                <button id="next-day"class="normal"><img src="/assests/Seta direita.svg" height="60px" width="60px"></button>
+                <button id="next-day"class="normal"><img src="/static/img/Seta direita.svg" height="60px" width="60px"></button>
             </div>
             <div class="cardapio2">
                     <div class="seletor">
@@ -65,6 +65,6 @@
             <button class="botaoembaixo" onclick=Refeicoes_alunos_botaoembaixo()><p>SUBMETER</p></button>
         </div>
     </div>
-    <script src="/script/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

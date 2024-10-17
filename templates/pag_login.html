@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
-    <link rel="stylesheet" href="/estilo/pag_login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pag_login.css') }}">
 </head>
 <body>
     <div class="meio">
-        <img src="/assests/logo.png" width="350" height="200">
+        <img src="/static/img/logo.png" width="350" height="200">
         <input id="cadastro" type="text" placeholder="CADASTRO" class="escrita" style="font-size: 18px; color:white; font-weight: bold;">
         <input type="password" placeholder="SENHA" class="escrita" style="font-size: 18px; color:white; font-weight: bold;">
         <button id="logButton" onclick=Log_In_Button()>LOG-IN</button>
     </div>
-    <script src="/script/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

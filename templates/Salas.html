@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/estilo/Salas.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Salas.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visão por Sala</title>
 </head>
 <body>
     <div class="cabecalho">
-        <a href="/Dashboard.html"><img src="/assests/logo.png" class="logo"></a>
-       
-        <a href="/Perfil_Nutricionista.html"><img src="/assests/perfil.png" class="perfil"></a>
+        <a href="/Dashboard"><img src="/static/img/logo.png" class="logo"></a>
+        <a href="/Perfil_nutricionista"><img src="/static/img/perfil.png" class="perfil"></a>
     </div>
     <div class="Grid_Title">
         <div class="Grid_Back">
-            <a style="color: black; text-decoration: none;" href="/Tables.html"><img src="/assests/Seta esquerda.svg" style="width: 50px; height: 50px;"></a>
+            <a style="color: black; text-decoration: none;" href="/Tables"><img src="/static/img/Seta esquerda.svg" style="width: 50px; height: 50px;"></a>
         </div>
         <div class="Grid_SubTitle">
             <h1>Ensino Fundamental</h1>

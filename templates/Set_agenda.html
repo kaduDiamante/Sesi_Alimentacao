@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='set_agenda.css') }}">
+    <title>Tabelas</title>
+</head>
+<body>
+    <div class="cabecalho">
+        <a href="/Dashboard"><img src="/static/img/logo.png" class="logo"></a>
+        <a href="/Perfil_nutricionista"><img src="/static/img/perfil.png" class="perfil"></a>
+    </div>
+    <form>
+    <DIV class="escolher_image">
+        <h1>ESCOLHA A SEMANA QUE DESEJA</h1>
+    </DIV>
+    <div class="escolher_image">
+        <input type='week' class="list" placeholder="ESCOLHA A SEMANA:" style="padding: 0px 10px 0px 5px;" >
+        </input>
+        <button type="submit" class="start_button">ENVIAR</button>
+        </form>
+    </div>
+</body>
+</html>
