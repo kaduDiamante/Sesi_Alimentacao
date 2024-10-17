@@ -37,19 +37,19 @@ function Desperdicio_submit_btn(){
 
 function Perfil_nutri_FinalButton(){
     if (confirm('Deseja SAIR?') == true){
-        window.location.href = "/pag_login.html"
+        window.location.href = "/"
     }
 }
 
 function Perfil_aluno_FinalButton(){
     if (confirm('Deseja SAIR?') == true){
-        window.location.href = "/pag_login.html"
+        window.location.href = "/"
     }
 }
 
 function Refeicoes_alunos_botaoembaixo(){
     window.alert('As informações foram enviadas com SUCESSO')
-    window.location.href = "/Dashboard Aluno.html"
+    window.location.href = "/Dashboard_Aluno"
 }
 
 var imageSource = {}
@@ -86,9 +86,9 @@ function Log_In_Button(){
     console.log(Set_cadastro)
     if (Set_cadastro){
         if (Set_cadastro == 'aluno' || Set_cadastro == 'Aluno'){
-            window.location.href = "/Dashboard Aluno.html"
+            window.location.href = "/Dashboard_Aluno"
         } else if (Set_cadastro == 'Nutricionista' || Set_cadastro == 'nutricionista'){
-            window.location.href = "/Dashboard.html"
+            window.location.href = "/Dashboard"
         }
     } else {
         window.alert('Insira valores')

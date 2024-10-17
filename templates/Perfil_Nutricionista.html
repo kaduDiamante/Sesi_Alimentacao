@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/estilo/Perfil.css">
-    <title>Perfil Aluno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Perfil.css') }}">
+    <title>Perfil Nutricionista</title>
 </head>
 <body>
     <header class="cabecalho">
         <div class="cima">
             <div class="cima1">
-                <a href="Dashboard Aluno.html" style="text-decoration: none;"><button class="normal"><img src="/assests/logo.png" style="width: 197px; height: 100px;"></button></a>
+                <a href="/Dashboard" style="text-decoration: none;"><button class="normal"><img src="/static/img/logo.png" style="width: 197px; height: 100px;"></button></a>
             </div>
         </div>
     </header>
     <main>
         <div class="subTitle">
-            <a class="item1" href="/Dashboard Aluno.html"><img src="/assests/Seta esquerda.svg" alt="" style="height: 50px; width: 50px;"></a>
-            <h1 class="item2">Perfil do Aluno</h1>
+            <a class="item1" href="/Dashboard"><img src="/static/img/Seta esquerda.svg" alt="" style="height: 50px; width: 50px;"></a>
+            <h1 class="item2">Perfil do Nutricionista</h1>
         </div>
         <div class="InfoMain">
             <div class="PerfilImg">
-                <img src="/assests/perfil.png" height="300" width="300">
+                <img src="/static/img/perfil.png" height="300" width="300">
             </div>
             <div class="InfoTexts">
                 <div class="InfoTitle">
@@ -29,16 +29,15 @@
                 </div>
                 <div class="InfoSubTexts">
                     <h3>NOME: XXXXXXXXXXXXXXXXXXXXXXXXXXXX</h3>
-                    <h3>R.M.: XXXXXXXXXXXXXXXXXXXXXXXXXXXX</h3>
-                    <h3>SALA: XXXXXXXXXXXXXXXXXXXXXXXXXXXX</h3>
+                    <h3>EMAIL: XXXXXXXXXXXXXXXXXXXXXXXXXXX</h3>
                     <h3>UNIDADE SESI: XXXXXXXXXXXXXXXXXXXX</h3>
                 </div>
             </div>
         </div>
         <div class="DIV_FinalButton">
-            <button class="FinalButton" onclick=Perfil_aluno_FinalButton()><h3>SAIR</h3></button>
+            <button class="FinalButton" onclick=Perfil_nutri_FinalButton()><h3>SAIR</h3></button>
         </div>
     </main>
-    <script src="/script/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
