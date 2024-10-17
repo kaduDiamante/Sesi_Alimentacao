@@ -46,6 +46,9 @@ alter table Alimentacao add constraint fk_Alimentacao_dia foreign key (DIA) refe
 
 alter table Alimentacao add constraint unique_key_Dia unique (RM, DIA)
 
+alter table Alimentacao drop constraint pk_Alimentacao
+
+
 -- INSERINDO OS INSERTS --
 
 INSERT INTO Desperdicio(DIA, QUANTIDADE)
@@ -89,15 +92,15 @@ VALUES
 
 INSERT INTO Alimentacao(RM, DIA, CAFE_DA_MANHA, ALMOCO, LANCHE_DA_TARDE)
 VALUES
-    (1017,'2024-09-12', 1, 1, 0 ),
-    (1027,'2024-09-12', 1, 1, 1 ),
-    (1037,'2024-09-12', 0, 1, 1 ),
-    (1047,'2024-09-13', 1, 1, 0 ),
-    (1057,'2024-09-13', 1, 0, 1 ),
-    (1067,'2024-09-13', 0, 1, 0 ),
-    (1077,'2024-09-14', 1, 1, 1 ),
-    (1087,'2024-09-14', 1, 0, 1 ),
-    (1097,'2024-09-14', 0, 1, 0 ),
+    --(1017,'2024-09-17', 1, NULL, 0 ),
+    --(1027,'2024-09-17', 1, 1, NULL ),
+    --(1037,'2024-09-17', NULL, NULL, 1 ),
+    --(1047,'2024-09-17', 1, NULL, NULL ),
+    (1057,'2024-09-17', NULL, NULL, 1 ),
+    (1067,'2024-09-15', 0, 1, 0 ),
+    (1077,'2024-09-16', 1, 1, 1 ),
+    (1087,'2024-09-16', 1, 0, 1 ),
+    (1097,'2024-09-16', 0, 1, 0 ),
     (1107,'2024-09-15', 1, 1, 1 );
 
 -- SELECT 1: Selecionar quantos alunos vão almoçar em determinado dia --
@@ -112,10 +115,34 @@ select COUNT(*) as TotalAlmoço from Alimentacao, Alunos where ALMOCO = 1 and DI
 
 select COUNT(*) as TotalQueNãoVãoComer from Alunos where RM not in (select RM from Alimentacao where dia = '15/09/2024')
 
+-- SELECT 4: Aluno que comeu menos durante todo o ano
+
+SELECT	
+    a.RM,
+    (SELECT COUNT(*) FROM Cardapio) * 3 AS Total_Refeicoes,
+    COUNT(CASE WHEN a.ALMOCO = 0 THEN 1 END) AS Total_Nao_Foi_Almoco,
+    COUNT(CASE WHEN a.CAFE_DA_MANHA = 0 THEN 1 END) AS Total_Nao_Foi_Cafe_da_Manha,
+    COUNT(CASE WHEN a.LANCHE_DA_TARDE = 0 THEN 1 END) AS Total_Nao_Foi_Cafe_da_Tarde,
+    COUNT(CASE WHEN a.ALMOCO = 0 THEN 1 END) + 
+    COUNT(CASE WHEN a.CAFE_DA_MANHA = 0 THEN 1 END) + 
+    COUNT(CASE WHEN a.LANCHE_DA_TARDE = 0 THEN 1 END) AS Mais_Nao_Foi_Comer,
+    ((SELECT COUNT(*) FROM Cardapio) * 3) - 
+    (COUNT(CASE WHEN a.ALMOCO = 0 THEN 1 END) + 
+    COUNT(CASE WHEN a.CAFE_DA_MANHA = 0 THEN 1 END) + 
+    COUNT(CASE WHEN a.LANCHE_DA_TARDE = 0 THEN 1 END)) AS Refeicoes_Consumidas
+FROM 
+    Alimentacao AS a
+GROUP BY 
+    a.RM
+ORDER BY 
+    Total_Nao_Foi_Almoco DESC, 
+    Total_Nao_Foi_Cafe_da_Manha DESC, 
+    Total_Nao_Foi_Cafe_da_Tarde DESC;
 
 select * from Alimentacao
 select * from Alunos
 select * from Desperdicio
 select * from Cardapio
+
 
 
