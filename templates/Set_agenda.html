@@ -16,10 +16,10 @@
         <h1>ESCOLHA A SEMANA QUE DESEJA</h1>
     </DIV>
     <div class="escolher_image">
-        <input type='week' class="list" placeholder="ESCOLHA A SEMANA:" style="padding: 0px 10px 0px 5px;" >
-        </input>
-        <button type="submit" class="start_button">ENVIAR</button>
+        <input id="input_week" type='week' class="list" placeholder="ESCOLHA A SEMANA:" style="padding: 0px 10px 0px 5px;" ></input>
+        <button id="submit_date_button" type="submit" class="start_button">ENVIAR</button>
         </form>
     </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

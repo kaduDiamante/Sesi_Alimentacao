@@ -32,9 +32,11 @@ def desperdicio():
 @app.route('/set_cardapio', methods=['POST', 'GET'])
 def cardapio():
     if request.method == 'POST':
-        informacao = request.get_json()
-        imgCode = informacao['imgSource']
-        pyBanco.insert_img(imgCode)
+        imgCode = request.files['file']
+        inicioSem = request.form.get('primeiroDia')
+        fimSem = request.form.get('segundoDia')
+        pyBanco.insert_image(imgCode, inicioSem, fimSem)
+        return ''
     else:
         return render_template('Set_Cardapio.html')
 

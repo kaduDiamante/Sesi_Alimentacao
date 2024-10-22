@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='Set_Cardapio.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Set Cardapio Nutri</title>
@@ -22,13 +23,14 @@
     </div>
     <main class="container">
         <div class="upload-container">
-            <input type="file" id="arquivo" name="arquivo" accept="image/*" onchange="previewImage(event)">
+            <input type="file" id="arquivo" name="arquivo" onchange="previewImage(event)" >
             <div class="image-preview" id="imagePreview"></div>
             <label for="arquivo" class="upload-label">ESCOLHER IMAGEM</label>
         </div>
         <div class="div_final_button">
-            <input class="final_button" type="submit" value="ENVIAR" onclick="Set_cardapio_final_button()">
+            <input id="input_week" type='week' class="list" placeholder="ESCOLHA A SEMANA:" style="padding: 0px 10px 0px 5px;" min="2024-W03"></input>
+            <input id="Submit_Set_Cardapio" class="final_button" type="submit" value="ENVIAR">
         </div>
     </main>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script_setCardapio.js') }}"></script>
 </body>

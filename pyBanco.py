@@ -1,5 +1,5 @@
 import pyodbc
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=SERVIDORPROF\SQLEXPRESS;DATABASE=sesialimentacao;uid=x_tech_sp;pwd=essa-equipe-nao-tem-senha')
+cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=servidorprof\sqlexpress;DATABASE=sesialimentacao;uid=x_tech_sp;pwd=essa-equipe-nao-tem-senha')
 cursor = cnxn.cursor()
 
 def insert(desperdicio, dia):
@@ -14,9 +14,8 @@ def insert_img(img_route):
     cursor.execute(query, (img_route, '18/05/2024', '23/05/2024'))
     cursor.commit()
 
-def insert_image(img_route):
-    with open(img_route, 'rb') as file:
-        img_data = file.read()
+def insert_image(img_route, inicioSem, fimSem):
+    img_data = img_route.read()
     query = (f"insert into cardapio(imagem, data_inicial, data_final) values(?, ?, ?)")
-    cursor.execute(query, (img_data, '21/09/2024', '26/09/2024'))
+    cursor.execute(query, (img_data, inicioSem, fimSem))
     cursor.commit()

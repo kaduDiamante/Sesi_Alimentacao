@@ -1,11 +1,8 @@
-const { default: axios, Axios } = require("axios");
-
 const dateInput = document.getElementById('date-input');
 const prevDayBtn = document.getElementById('prev-day');
 const nextDayBtn = document.getElementById('next-day');
 
 document.getElementById("enviar").addEventListener('click', function(){
-    console.log('chamou')
     const desperdicio_2 = document.getElementById('segunda').value
     const desperdicio_3 = document.getElementById('terca').value
     const desperdicio_4 = document.getElementById('quarta').value
@@ -50,35 +47,6 @@ function Perfil_aluno_FinalButton(){
 function Refeicoes_alunos_botaoembaixo(){
     window.alert('As informações foram enviadas com SUCESSO')
     window.location.href = "/Dashboard_Aluno"
-}
-
-var imageSource = {}
-
-function previewImage(event) {
-    const imagePreview = document.getElementById('imagePreview');
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            imageSource = e.target.result;
-            console.log(imageSource)
-            imagePreview.innerHTML = `<img src="${e.target.result}" alt="Imagem Selecionada">`;
-        }
-        reader.readAsDataURL(file);
-    }
-}
-
-function Set_cardapio_final_button(){
-    axios.post('/cardapio',{
-        imgSource: imageSource
-    })
-    .then(response => {
-        console.log(response.data)
-        alert(response.data.mensagem)
-    })
-    .catch(error => {
-        console.error('Erro ao enviar os dados:', error.response)
-    })
 }
 
 function Log_In_Button(){
@@ -169,3 +137,11 @@ function clearAllCheckboxes() {
 }
 
 // ------------------------------------ //
+
+document.getElementById('submit_date_button').addEventListener('click', function(){
+    const teste = document.getElementById('input_week').value
+    console.log(teste)
+})
+
+
+
