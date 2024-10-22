@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, jsonify,send_file
 import pyBanco
-import io
-import json
 
 app = Flask(__name__)
 
@@ -43,10 +41,6 @@ def cardapio():
     else:
         return render_template('Set_Cardapio.html')
 
-
-
-
-
 @app.route('/Set_agenda', methods=['POST', 'GET'] )
 def Set_agenda():
     if request.method == 'POST':
@@ -58,19 +52,6 @@ def Set_agenda():
         return jsonify(select)
     else:
         return render_template('Set_agenda.html')
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @app.route('/Perfil_nutricionista')
 def Perfil_nutricionista():
