@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify,send_file
 import pyBanco
+import io
+import json
 
 app = Flask(__name__)
 
@@ -35,10 +37,40 @@ def cardapio():
         imgCode = request.files['file']
         inicioSem = request.form.get('primeiroDia')
         fimSem = request.form.get('segundoDia')
-        pyBanco.insert_image(imgCode, inicioSem, fimSem)
+        dados = pyBanco.insert_image(imgCode, inicioSem, fimSem)
+        print(dados)
         return ''
     else:
         return render_template('Set_Cardapio.html')
+
+
+
+
+
+@app.route('/Set_agenda', methods=['POST', 'GET'] )
+def Set_agenda():
+    if request.method == 'POST':
+        informacoes = request.get_json()
+        data_ini = informacoes.get('data_inicial')
+        data_final = informacoes.get('data_final')
+        select = pyBanco.select_cardapio(data_ini, data_final)
+        print(select)
+        return jsonify(select)
+    else:
+        return render_template('Set_agenda.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @app.route('/Perfil_nutricionista')
 def Perfil_nutricionista():
@@ -63,10 +95,6 @@ def Tables():
 @app.route('/Salas')
 def Salas():
     return render_template('Salas.html')
-
-@app.route('/Set_agenda')
-def Set_agenda():
-    return render_template('Set_agenda.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

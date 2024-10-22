@@ -1,4 +1,5 @@
 import pyodbc
+import base64
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=servidorprof\sqlexpress;DATABASE=sesialimentacao;uid=x_tech_sp;pwd=essa-equipe-nao-tem-senha')
 cursor = cnxn.cursor()
 
@@ -19,3 +20,11 @@ def insert_image(img_route, inicioSem, fimSem):
     query = (f"insert into cardapio(imagem, data_inicial, data_final) values(?, ?, ?)")
     cursor.execute(query, (img_data, inicioSem, fimSem))
     cursor.commit()
+
+def select_cardapio(data_ini, data_final):
+    query = (f'select imagem from cardapio where data_inicial = ? and data_final = ?')
+    cursor.execute(query, (data_ini, data_final))
+    cardapio_img = cursor.fetchone()
+    imagens = base64.b64encode(cardapio_img[0]).decode('utf-8')
+    return imagens
+

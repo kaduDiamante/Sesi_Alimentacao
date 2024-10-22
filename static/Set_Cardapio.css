@@ -7,6 +7,18 @@ body {
     font-family: "Century Gothic", "Arial", sans-serif;
 }
 
+.list{
+    width: 40%;
+    height: 62px;
+    border-radius: 10px;
+    border: 1px;
+    border: 1px solid black;
+    font-family: "Century Gothic", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 80px;
+}
+
 .cabecalho{
     background-color: #496E4C;
     padding: 15px;
@@ -166,6 +178,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 60px;
+    flex-direction: column;
 }
 
 .final_button{
@@ -196,3 +209,4 @@ body {
     justify-content: center;
     align-items: center;
 }
+

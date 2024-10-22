@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='set_agenda.css') }}">
     <title>Tabelas</title>
 </head>
@@ -18,8 +19,8 @@
     <div class="escolher_image">
         <input id="input_week" type='week' class="list" placeholder="ESCOLHA A SEMANA:" style="padding: 0px 10px 0px 5px;" ></input>
         <button id="submit_date_button" type="submit" class="start_button">ENVIAR</button>
-        </form>
     </div>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="container"></div>
+    <script src="{{ url_for('static', filename='js/set_agenda.js') }}"></script>
 </body>
 </html>
