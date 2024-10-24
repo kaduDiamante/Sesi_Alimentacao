@@ -32,11 +32,14 @@
                     <h3>EMAIL: XXXXXXXXXXXXXXXXXXXXXXXXXXX</h3>
                     <h3>UNIDADE SESI: XXXXXXXXXXXXXXXXXXXX</h3>
                 </div>
+                <div class="DIV_FinalButton">
+                    <button class="FinalButtonED" onclick=Perfil_nutri_FinalButton()><h3>EDITAR</h3></button>
+                    <button class="FinalButton" onclick=Perfil_nutri_FinalButton()><h3>SAIR</h3></button>
+                </div>
             </div>
+            
         </div>
-        <div class="DIV_FinalButton">
-            <button class="FinalButton" onclick=Perfil_nutri_FinalButton()><h3>SAIR</h3></button>
-        </div>
+        
     </main>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

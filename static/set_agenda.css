@@ -7,6 +7,14 @@ body {
     font-family: "Century Gothic", "Arial", sans-serif;
 }
 
+.center_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .escolher_image{
     margin-top: 30px;
     display: flex;
@@ -109,9 +117,7 @@ th, td {
 }
 
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid black;
 }
 
 .style_new_img{
