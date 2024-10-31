@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Gerar_Agenda.css') }}">
+    <title>Gerar Agenda</title>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <a href="/Dashboard"><img src="/static/img/logo.png" alt="" srcset="" class="logo"></a>
+            <a href="/Perfil_nutricionista"><img src="/static/img/perfil.png" alt="" class="perfil"></a>
+        </div>
+    </header>
+    <main class="allBox">
+        <div class="firstTitle">
+            <h1>Gerar Agenda</h1>
+        </div>
+        <div class="div_final_button">
+            <input id="input_week" type='week' class="list" placeholder="ESCOLHA A SEMANA:" min="2024-W03">
+            <input id="Submit_Set_Agenda" class="final_button" type="submit" value="SELECIONAR SEMANA">
+        </div>
+        <div class="mainBox">
+            <div class="Box_1">
+                <div class="dataTitle">
+                    <h2 id="segunda">Selecione a Semana</h2>
+                </div>
+                <div class="daysBox">
+                    <h3>Lanche da Manhã</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Almoço</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Café da Tarde</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+            </div>
+            <div class="Box_2">
+                <div class="dataTitle">
+                    <h2 id="terca">Selecione a Semana</h2>
+                </div>
+                <div class="daysBox">
+                    <h3>Lanche da Manhã</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Almoço</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Café da Tarde</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+            </div>
+            <div class="Box_3">
+                <div class="dataTitle">
+                    <h2 id="quarta">Selecione a Semana</h2>
+                </div>
+                <div class="daysBox">
+                    <h3>Lanche da Manhã</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Almoço</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Café da Tarde</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+            </div>
+            <div class="Box_4">
+                <div class="dataTitle">
+                    <h2 id="quinta">Selecione a Semana</h2>
+                </div>
+                <div class="daysBox">
+                    <h3>Lanche da Manhã</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Almoço</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Café da Tarde</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+            </div>
+            <div class="Box_5">
+                <div class="dataTitle">
+                    <h2 id="sexta">Selecione a Semana</h2>
+                </div>
+                <div class="daysBox">
+                    <h3>Lanche da Manhã</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Almoço</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+                <div class="daysBox">
+                    <h3>Café da Tarde</h3>
+                    <div class="choiseDiv Verde"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Div_last_button">
+            <input class="last_button" type="submit" value="ENVIAR DADOS">
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/Gerar_Agenda.js') }}"></script>
+</body>
+</html>

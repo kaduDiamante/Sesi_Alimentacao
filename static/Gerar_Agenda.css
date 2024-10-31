@@ -1,0 +1,211 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Century Gothic", "Arial", sans-serif;
+}
+
+.cabecalho{
+    background-color: #496E4C; 
+    padding: 15px;
+    height: 116;
+    width: 1440;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo{
+    width: 197px;
+    height: 100px;
+}
+
+.perfil{
+    height: 70px;
+    width: 70px;
+    margin-top: 10px;
+}
+
+.allBox{
+    margin: 20px;
+}
+
+.firstTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px 40px 0px;
+}
+
+.mainBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0px 25px 0px 25px;
+    gap: 20px;
+}
+
+.Box_1{
+    grid-column: 1;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 0px 15px 0px;
+}
+
+.dataTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 0px 10px 0px;
+    background-color: #496E4C;
+}
+
+.daysBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    padding: -5px;
+    gap: 10px;
+}
+
+.choiseDiv{
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Verde{
+    background-color: rgba(12, 186, 12, 0.525);
+    border: solid 2px rgb(0, 178, 0); 
+}
+
+.Vermelho{
+    background-color: rgba(178, 11, 11, 0.525); 
+    border: solid 2px rgb(178, 11, 11); 
+}
+
+
+.Box_2{
+    grid-column: 2;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 0px 15px 0px;
+}
+
+.Box_3{
+    grid-column: 3;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 0px 15px 0px;
+}
+
+.Box_4{
+    grid-column: 4;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 0px 15px 0px;
+}
+
+.Box_5{
+    grid-column: 5;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 0px 15px 0px;
+}
+
+.div_final_button{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.list{
+    padding: 22px 35px 22px 35px;
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.final_button{
+    background-color: rgba(4, 136, 57);
+    padding: 20px 70px 20px 70px;
+    font-weight: bold;
+    color: white;
+    font-size: larger;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.final_button:hover{
+    background-color: white;
+    color: rgba(4, 136, 57);
+    padding: 22px 72px 22px 72px;
+}
+
+.Div_last_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 10px 40px 10px;
+}
+
+.last_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 20px 60px 20px 60px;
+    background-color: rgba(4, 136, 57);
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: large
+}
+
+.last_button:hover{
+    background-color: white;
+    color: rgba(4, 136, 57);
+    padding: 22px 62px 22px 62px
+}

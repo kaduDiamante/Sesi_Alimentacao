@@ -41,5 +41,6 @@ document.getElementById('submit_date_button').addEventListener('click', function
     })
     .catch(function(error) {
         console.error('Erro ao buscar imagens:', error);
+        window.alert('Essa semana ainda não possui um CARDÁPIO')
     });
 });

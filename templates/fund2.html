@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='turmas.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <a href="/Dashboard"><img src="/static/img/logo.png" alt="" srcset="" class="logo"></a>
+            <a href="/Perfil_nutricionista"><img src="/static/img/perfil.png" alt="" class="perfil"></a>
+        </div>
+    </header>
+    <div class="volta">
+        <div class="divisao">
+            <label for="turma">Selecione a Sala:</label>
+            <select id="turma" class="selecionar" multiple>
+                <option class="selecionar1" value="">Escolha uma sala</option>
+                <option class="selecionar1" value="6° ANO A">6° ANO A</option>
+                <option class="selecionar1" value="6° ANO B">6° ANO B</option>
+                <option class="selecionar1" value="6° ANO C">6° ANO C</option>
+                <option class="selecionar1" value="7° ANO A">7° ANO A</option>
+                <option class="selecionar1" value="7° ANO B">7° ANO B</option>
+                <option class="selecionar1" value="7° ANO C">7° ANO C</option>
+                <option class="selecionar1" value="8° ANO A">8° ANO A</option>
+                <option class="selecionar1" value="8° ANO B">8° ANO B</option>
+                <option class="selecionar1" value="8° ANO C">8° ANO C</option>
+                <option class="selecionar1" value="9° ANO A">9° ANO A</option>
+                <option class="selecionar1" value="9° ANO B">9° ANO B</option>
+                <option class="selecionar1" value="9° ANO C">9° ANO C</option>
+            </select>
+            <label for="dia">Selecione o Dia da Semana:</label>
+            <select id="dia" class="selecionar">
+                <option value="">Escolha um dia</option>
+                <option value="segunda">Segunda-feira</option>
+                <option value="terca">Terça-feira</option>
+                <option value="quarta">Quarta-feira</option>
+                <option value="quinta">Quinta-feira</option>
+                <option value="sexta">Sexta-feira</option>
+            </select>
+        </div>
+        <div class="divisao">
+            <div id="refeicoes" style="display: none;">
+                <h3>Selecione as Refeições:</h3>
+                <label class="selecionar2"><input type="checkbox" value="Cafê da Manha"> Café da Manhã</label><br>
+                <label><input type="checkbox" value="Almoco"> Almoço</label><br>
+                <label><input type="checkbox" value="Cafe da Tarde"> Café da Tarde</label><br>
+            </div>
+        </div>
+        <div class="submeter">
+            <button onclick="registrarRefeicao()" class="clicar">Registrar Refeição</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script_turmas.js') }}"></script>
+</body>
+
+</html>
+</body>
+
+</html>

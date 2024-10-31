@@ -77,5 +77,25 @@ def Tables():
 def Salas():
     return render_template('Salas.html')
 
+@app.route('/Gerar_Agenda')
+def Gerar_Agenda():
+    return render_template('Gerar_Agenda.html')
+
+@app.route('/set_horario')
+def Configurar_Horarios():
+    return render_template('tabela_setHorario.html')
+
+@app.route('/fund1')
+def fund1():
+    return render_template('fund1.html')
+
+@app.route('/fund2')
+def fund2():
+    return render_template('fund2.html')
+
+@app.route('/medio')
+def medio():
+    return render_template('medio.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
