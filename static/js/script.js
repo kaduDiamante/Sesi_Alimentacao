@@ -44,6 +44,26 @@ function Perfil_aluno_FinalButton(){
     }
 }
 
+function Perfil_nutri_FinalButtonED(){
+    window.location.href = "/Editar_nutri"
+}
+
+function Perfil_aluno_FinalButtonED(){
+    window.location.href = "/Editar_aluno"
+}
+
+function Perfil_nutri_confirmar(){
+    if (confirm('Deseja CONFIRMAR?') == true){
+        window.location.href = "/Perfil_nutricionista"
+    }
+}
+
+function Perfil_aluno_confirmar(){
+    if (confirm('Deseja CONFIRMAR?') == true){
+        window.location.href = "/Perfil_Aluno"
+    }
+}
+
 function Refeicoes_alunos_botaoembaixo(){
     window.alert('As informações foram enviadas com SUCESSO')
     window.location.href = "/Dashboard_Aluno"

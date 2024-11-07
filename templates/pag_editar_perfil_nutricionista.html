@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='editar_perfil.css') }}">
+    <title>Editar Perfil</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cima">
+            <div class="cima1">
+                <a href="/Dashboard" style="text-decoration: none;"><button class="normal"><img src="/static/img/logo.png" style="width: 197px; height: 100px;"></button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="subTitle">
+            <a class="item1" href="/Perfil_nutricionista"><img src="/static/img/Seta esquerda.svg" alt="" style="height: 50px; width: 50px;"></a>
+            <h1 style="margin-right: 45px;" class="item2">Editar Perfil</h1>
+        </div>
+        <div class="centrar">
+            <div class="inicio">
+                <div class="PerfilImg">
+                    <img src="/static/img/perfil.png" height="300" width="300">
+                </div>
+                <input class="lugar_escre" type="text" placeholder="NOME">
+                <input class="lugar_escre" type="text" placeholder="CPF">
+                <input class="lugar_escre" type="text" placeholder="EMAIL">
+                <input class="lugar_escre" type="text" placeholder="SENHA">
+                <input class="lugar_escre" type="text" placeholder="CELULAR">
+                <button style="margin-top: 10px;" class="FinalButton" onclick=Perfil_nutri_confirmar()><h3>CONFIRMAR</h3></button>
+            </div>
+        </div>
+        
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

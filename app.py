@@ -97,5 +97,13 @@ def fund2():
 def medio():
     return render_template('medio.html')
 
+@app.route('/Editar_nutri')
+def Editar_nutri():
+    return render_template('pag_editar_perfil_nutricionista.html')
+
+@app.route('/Editar_aluno')
+def Editar_aluno():
+    return render_template('pag_editar_perfil_aluno.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
