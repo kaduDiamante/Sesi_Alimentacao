@@ -10,13 +10,13 @@ function alterarFundo() {
         var numero = parseFloat(h1[index].textContent);
         
         if (numero > 0 && numero <= 3 ) {
-            fundo[index].style.backgroundColor = 'green ';
+            fundo[index].style.backgroundColor = '#609A34';
         }
         else if (numero > 3 && numero <= 5 ) {
-            fundo[index].style.backgroundColor = 'yellow ';
+            fundo[index].style.backgroundColor = '#CBD243';
         }
         else {
-            fundo[index].style.backgroundColor = 'red';
+            fundo[index].style.backgroundColor = '#AE352B';
         }
     }
 }
