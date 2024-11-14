@@ -28,3 +28,8 @@ def select_cardapio(data_ini, data_final):
     imagens = base64.b64encode(cardapio_img[0]).decode('utf-8')
     return imagens
 
+def insert_refeicao_agendada(id_usuario, dic_days):
+    query = (f'insert into REFEICAO_AGENDADA(id_data, id_usuario, cafe_manha, almoco, cafe_tarde) values(?, ?, ?, ?, ?)')
+    for dado in dic_days:
+        cursor.execute(query, (dado['data'], int(id_usuario), dado['cafe_manha'], dado['almoco'], dado['cafe_tarde']))
+        cursor.commit()

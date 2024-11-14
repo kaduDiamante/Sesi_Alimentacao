@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFEIÇÕES</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style refeicoes alunos.css') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="/static/img/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assests/logo.png">
 </head>
 <body>
     <header class="cabecalho">
@@ -43,21 +44,21 @@
         <div class="fim2">
             <div class="titulo_fim2">
                 <button id="prev-day" class="normal"><img src="/static/img/Seta esquerda.svg" height="60px" width="60px" ></button>
-                <input type="text" id="date-input" placeholder="DD/MM/AAAA" readonly>
+                <input type="text" id="date-input" readonly>
                 <button id="next-day"class="normal"><img src="/static/img/Seta direita.svg" height="60px" width="60px"></button>
             </div>
             <div class="cardapio2">
                     <div class="seletor">
                         <div class="style_div_checkBox">
-                            <input type="checkbox" name="LANCHE DA MANHÃ" class="clearCheckbox"/>
+                            <input type="checkbox" id="check_cafe" name="LANCHE DA MANHÃ" class="clearCheckbox"/>
                             <label><p style="font-size: 20px">CAFÉ DA MANHÃ</p></label>
                         </div>
                         <div class="style_div_checkBox">
-                            <input type="checkbox" name="ALMOÇO"  class="clearCheckbox"/>
+                            <input type="checkbox" id="check_almoco" name="ALMOÇO"  class="clearCheckbox"/>
                             <label><p style="font-size: 20px;">ALMOÇO</p></label>
                         </div>
                         <div class="style_div_checkBox">
-                            <input type="checkbox"  name="ALMOÇO"  class="clearCheckbox"/>
+                            <input type="checkbox" id="check_lanche"  name="ALMOÇO"  class="clearCheckbox"/>
                             <label><p style="font-size: 20px;">CAFÉ DA TARDE</p></label>
                         </div>
                     </div>
@@ -65,6 +66,7 @@
             <button class="botaoembaixo" onclick=Refeicoes_alunos_botaoembaixo()><p>SUBMETER</p></button>
         </div>
     </div>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/refeicoes_alunos.js') }}"></script>
 </body>
 </html>
+

@@ -53,6 +53,15 @@ def Set_agenda():
     else:
         return render_template('Set_agenda.html')
 
+@app.route('/refeicaoAgendada', methods=['POST'] )
+def refeicaoAgendada():
+    informacoes = request.get_json()
+    id_usuario = informacoes.get('id_usuario')
+    refeicoes = informacoes.get('refeicoes')
+    pyBanco.insert_refeicao_agendada(id_usuario, refeicoes)
+    return 'sucesso'
+
+
 @app.route('/Perfil_nutricionista')
 def Perfil_nutricionista():
     return render_template('Perfil_Nutricionista.html')
